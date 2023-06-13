@@ -1,0 +1,7 @@
+p {
+  color: pink;
+}
+
+a:hover {
+  text-decoration: underline;
+}

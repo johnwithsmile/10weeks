@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>내 첫 HTML페이지</title>
+    <style>
+      .border {
+        border: 1px solid black;
+      }
+      a {
+        text-decoration: none;
+      }
+      img {
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>1.HTML 제목은 &lt;h1&gt; ~ &lt;h6&gt; 태그로 정의됩니다.</p>
+    <p>
+      &lt;h1&gt; 은 가장 중요한 제목을, &lt;h6&gt; 은 가장 중요하지 않은 제목을
+      정의합니다:
+    </p>
+    <div class="border">
+      <h1>This is heading 1</h1>
+      <h2>This is heading 2</h2>
+      <h3>This is heading 3</h3>
+    </div>
+    <p>2. 단락은 &lt;p&gt; 태그로 정의돕니다.</p>
+    <div class="border">
+      <p>this is paragraph</p>
+      <p>this is paragraph</p>
+    </div>
+    <p>3. 링크는 &lt;a&gt; 태그로 정의됩니다.</p>
+    <div>
+      <p><a href="www.naver.com">클릭하면 네이버로 이동합니다.</a></p>
+      <p><a href="www.google.com">클릭하면 구글로 이동합니다.</a></p>
+    </div>
+    <p>
+      3. 이미지는 &lt;img&gt; 태그로 정의됩니다. 소스 파일(src), 대체
+      텍스트(alt) 너비 및 높이가 속성으로 제공됩니다.
+    </p>
+    <div class="border">
+      <img
+        src="https://images.unsplash.com/photo-1638351501396-6cf23d77f437?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWlkb3JpJTIwc291cnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=1400&q=60"
+        alt="midori sour"
+      />
+    </div>
+    <h2>장바구니 목록</h2>
+    <ul>
+      <li>사과</li>
+      <li>딸기</li>
+      <li>바나나</li>
+    </ul>
+    <table>
+      <thead>
+        <tr>
+          <td>과일</td>
+          <td>수량</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>사과</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>바나나</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <td>딸기</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
+    <form action="" method="get" class="form-example">
+      <div class="form-example">
+        <label for="name"> 이름: </label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <br>
+      <div class="form-example">
+        <label for="email">이메일: </label>
+        <input type="email" name="email" id="email" required />
+      </div>
+      <br>
+      </div>
+      <div class="form-example">
+        <label for="password">비밀번호: </label>
+        <input type="password" name="password" id="password" required />
+      </div>
+      <br>
+      <div class="form-example">
+        <input type="submit" value="가입하기!" />
+      </div>
+    </form>
+  </body>
+</html>
