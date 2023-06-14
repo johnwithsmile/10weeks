@@ -1,0 +1,39 @@
+.menu {
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 10px;
+  position: fixed;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.logo-img {
+  width: 80px;
+  height: auto;
+}
+
+.menu-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu-list li {
+  padding: 15px;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.menu-list li a:hover {
+  color: #ffcc00;
+}

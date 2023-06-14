@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .flex-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .flex-item {
+        width: calc(33.33% - 10px);
+        margin-bottom: 20px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        font-size: 18px;
+        text-align: center;
+        padding: 10px;
+      }
+
+      .flex-item img {
+        width: 320px;
+        margin-bottom: 10px;
+      }
+
+      .flex-wrapper {
+        width: 320px;
+        height: 230px;
+        padding: 16px;
+      }
+
+      .flex-item button {
+        padding: 8px 16px;
+        background-color: #ffffff;
+        color: #ff5a5a;
+        border: none;
+        cursor: pointer;
+        flex-direction: end;
+      }
+
+      #available {
+        color: #16a34a;
+        background-color: #dcfce7;
+        padding: 0px 3px;
+        border-radius: 15px;
+        margin-left: 1;
+        width: 57px;
+        height: 19px;
+        font-size: 12px;
+        text-align: center;
+        font-weight: bolder;
+      }
+
+      #year {
+        display: flex;
+        flex-direction: row;
+      }
+
+      #year i {
+        align-self: flex-end;
+        margin-bottom: 15px;
+      }
+
+      #year p {
+        font-size: 12px;
+      }
+
+      #subject {
+        font-size: 16px;
+        white-space: normal;
+        text-align: left;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+
+      #desc {
+        font-size: 12px;
+        margin: 4px;
+        width: 288px;
+        height: 48px;
+        font-weight: bold;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        line-height: 1.2;
+        height: 3.6em;
+        text-align: left;
+        word-wrap: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        color: #9ca3af;
+      }
+
+      #bottom-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px 5px;
+      }
+
+      #course {
+        font-size: 12px;
+        color: #6b7280;
+        background-color: #f3f4f6;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        height: 20px;
+        padding: 0px 3px;
+        font-weight: bolder;
+      }
+
+      #detail-btn {
+        color: white;
+        background: #3b82f6;
+        font-size: 14px;
+        width: 98%;
+        height: 36px;
+        text-align: center;
+        border-radius: 10px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">
+        <img
+          src="https://sniperfactory.com/api/files/courses/2g41rrrm5lttkl0/flutter3rd_qdbQ03hu4U.png"
+          alt="Image 1"
+        />
+        <div class="flex-wrapper">
+          <div id="available">신청 가능</div>
+          <h3 id="subject">flutter 모바일 어플리케이션 개발 부트캠프</h3>
+          <p id="desc">
+            4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는
+            어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터
+            심화, 응용까지 배워보고 나면 행복해요 Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Porro modi illo quo tenetur temporibus
+            facilis. Impedit maxime praesentium ipsa, vitae tempore, neque saepe
+            officiis quam error quisquam maiores expedita ad.
+          </p>
+          <div id="bottom-wrapper">
+            <p id="course">취업연계과정</p>
+            <div id="year">
+              <p>기수: 3기</p>
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+          </div>
+          <button id="detail-btn">더 알아보기</button>
+        </div>
+      </div>
+      <div class="flex-item">
+        <img
+          src="https://sniperfactory.com/api/files/courses/2g41rrrm5lttkl0/flutter3rd_qdbQ03hu4U.png"
+          alt="Image 1"
+        />
+        <div class="flex-wrapper">
+          <div id="available">신청 가능</div>
+          <h3 id="subject">flutter 모바일 어플리케이션 개발 부트캠프</h3>
+          <p id="desc">
+            4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는
+            어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터
+            심화, 응용까지 배워보고 나면 행복해요 Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Porro modi illo quo tenetur temporibus
+            facilis. Impedit maxime praesentium ipsa, vitae tempore, neque saepe
+            officiis quam error quisquam maiores expedita ad.
+          </p>
+          <div id="bottom-wrapper">
+            <p id="course">취업연계과정</p>
+            <div id="year">
+              <p>기수: 3기</p>
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+          </div>
+          <button id="detail-btn">더 알아보기</button>
+        </div>
+      </div>
+      <div class="flex-item">
+        <img
+          src="https://sniperfactory.com/api/files/courses/2g41rrrm5lttkl0/flutter3rd_qdbQ03hu4U.png"
+          alt="Image 1"
+        />
+        <div class="flex-wrapper">
+          <div id="available">신청 가능</div>
+          <h3 id="subject">flutter 모바일 어플리케이션 개발 부트캠프</h3>
+          <p id="desc">
+            4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는
+            어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터
+            심화, 응용까지 배워보고 나면 행복해요 Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Porro modi illo quo tenetur temporibus
+            facilis. Impedit maxime praesentium ipsa, vitae tempore, neque saepe
+            officiis quam error quisquam maiores expedita ad.
+          </p>
+          <div id="bottom-wrapper">
+            <p id="course">취업연계과정</p>
+            <div id="year">
+              <p>기수: 3기</p>
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+          </div>
+          <button id="detail-btn">더 알아보기</button>
+        </div>
+      </div>
+      <div class="flex-item">
+        <img
+          src="https://sniperfactory.com/api/files/courses/2g41rrrm5lttkl0/flutter3rd_qdbQ03hu4U.png"
+          alt="Image 1"
+        />
+        <div class="flex-wrapper">
+          <div id="available">신청 가능</div>
+          <h3 id="subject">flutter 모바일 어플리케이션 개발 부트캠프</h3>
+          <p id="desc">
+            4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는
+            어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터
+            심화, 응용까지 배워보고 나면 행복해요 Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Porro modi illo quo tenetur temporibus
+            facilis. Impedit maxime praesentium ipsa, vitae tempore, neque saepe
+            officiis quam error quisquam maiores expedita ad.
+          </p>
+          <div id="bottom-wrapper">
+            <p id="course">취업연계과정</p>
+            <div id="year">
+              <p>기수: 3기</p>
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+          </div>
+          <button id="detail-btn">더 알아보기</button>
+        </div>
+      </div>
+      <div class="flex-item">
+        <img
+          src="https://sniperfactory.com/api/files/courses/2g41rrrm5lttkl0/flutter3rd_qdbQ03hu4U.png"
+          alt="Image 1"
+        />
+        <div class="flex-wrapper">
+          <div id="available">신청 가능</div>
+          <h3 id="subject">flutter 모바일 어플리케이션 개발 부트캠프</h3>
+          <p id="desc">
+            4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는
+            어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터
+            심화, 응용까지 배워보고 나면 행복해요 Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Porro modi illo quo tenetur temporibus
+            facilis. Impedit maxime praesentium ipsa, vitae tempore, neque saepe
+            officiis quam error quisquam maiores expedita ad.
+          </p>
+          <div id="bottom-wrapper">
+            <p id="course">취업연계과정</p>
+            <div id="year">
+              <p>기수: 3기</p>
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+          </div>
+          <button id="detail-btn">더 알아보기</button>
+        </div>
+      </div>
+      <div class="flex-item">
+        <img
+          src="https://sniperfactory.com/api/files/courses/2g41rrrm5lttkl0/flutter3rd_qdbQ03hu4U.png"
+          alt="Image 1"
+        />
+        <div class="flex-wrapper">
+          <div id="available">신청 가능</div>
+          <h3 id="subject">flutter 모바일 어플리케이션 개발 부트캠프</h3>
+          <p id="desc">
+            4개월 간 스나이퍼팩토리와 함께 Flutter로 "내가 원하는
+            어플리케이션"을 만들어보는 시간입니다. Flutter와 Dart의 기초부터
+            심화, 응용까지 배워보고 나면 행복해요 Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Porro modi illo quo tenetur temporibus
+            facilis. Impedit maxime praesentium ipsa, vitae tempore, neque saepe
+            officiis quam error quisquam maiores expedita ad.
+          </p>
+          <div id="bottom-wrapper">
+            <p id="course">취업연계과정</p>
+            <div id="year">
+              <p>기수: 3기</p>
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+          </div>
+          <button id="detail-btn">더 알아보기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
