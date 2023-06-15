@@ -1,0 +1,16 @@
+#red {
+  background-color: red;
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+  position: relative;
+}
+
+#blue {
+  position: absolute;
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  top: 80px;
+}
