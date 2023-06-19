@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greetings</title>
+  </head>
+  <body>
+    <script>
+      let person = {
+        name: "John",
+        age: 500,
+        height: 3000,
+        weight: 12,
+        career: { first: "barista", second: "teacher", third: "programmer" },
+      };
+      person.belong = "programmer";
+
+      document.write(`제 이름은 ${person.name}입니다.`);
+      document.write(`제 나이는 ${person.age}입니다.`);
+      document.write(
+        `제 직업은 ${person.career.first}, ${person.career.second}, ${person.career.third}입니다.`
+      );
+    </script>
+  </body>
+</html>

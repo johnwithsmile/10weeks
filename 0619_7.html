@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greetings</title>
+  </head>
+  <body>
+    <button onclick="test(event)">클릭!!</button>
+    <script>
+      function circleWidth(r) {
+        let width = r * r * 3.14;
+        return width;
+      }
+      document.write(circleWidth(10));
+
+      function test(e) {
+        console.log(e.target);
+        document.write("hello world");
+        console.log("it works!");
+      }
+    </script>
+  </body>
+</html>
