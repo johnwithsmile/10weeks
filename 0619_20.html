@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <style>
+      #cartItems {
+        list-style-type: none;
+      }
+      .add_shopping_list {
+        background-color: rgba(144, 196, 67, 0.3);
+        width: 130px;
+        height: 20px;
+        cursor: pointer;
+        border: 1px solid black;
+        text-align: center;
+        border-radius: 15px;
+        font-weight: bold;
+      }
+      .product_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .product {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 5px;
+      }
+      .main_wrapper {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+      }
+      .cart {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main_wrapper">
+      <div class="product_container">
+        <div class="product">
+          <h2>사과</h2>
+          <h3>1000원</h3>
+          <div class="add_shopping_list" onclick="addApple()">
+            장바구니에 추가
+          </div>
+        </div>
+        <div class="product">
+          <h2>바나나</h2>
+          <h3>1500원</h3>
+          <div class="add_shopping_list" onclick="addBanana()">
+            장바구니에 추가
+          </div>
+        </div>
+      </div>
+      <div class="cart">
+        <h2>장바구니</h2>
+        <ul id="cartItems"></ul>
+        <h2>총합: <span id="total">0</span>원</h2>
+      </div>
+    </div>
+    <script>
+      let total = 0;
+
+      function addApple() {
+        total += 1000;
+        const cartItems = document.getElementById("cartItems");
+        const appleItem = document.createElement("li");
+        appleItem.textContent = "사과를 장바구니에 추가했습니다.";
+        cartItems.appendChild(appleItem);
+        document.getElementById("total").innerText = total;
+      }
+
+      function addBanana() {
+        total += 1500;
+        const cartItems = document.getElementById("cartItems");
+        const bananaItem = document.createElement("li");
+        bananaItem.textContent = "바나나를 장바구니에 추가했습니다.";
+        cartItems.appendChild(bananaItem);
+        document.getElementById("total").innerText = total;
+      }
+    </script>
+  </body>
+</html>

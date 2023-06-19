@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Live Chat</title>
+    <style>
+      #chatbox {
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        overflow-y: scroll;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Live Chat</h1>
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" placeholder="Enter your username" />
+    </div>
+    <div id="participantList">
+      <strong>Participants:</strong>
+      <ul></ul>
+    </div>
+    <div id="chatbox"></div>
+    <div>
+      <input type="text" id="message" placeholder="Type your message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+
+    <script>
+      const chatbox = document.getElementById("chatbox");
+      const messageInput = document.getElementById("message");
+      const sendButton = document.getElementById("sendBtn");
+      const usernameInput = document.getElementById("username");
+      const participantList = document.querySelector("#participantList ul");
+
+      // Function to add a new message to the chatbox
+      function addMessage(sender, message) {
+        const messageElement = document.createElement("p");
+        messageElement.innerHTML = `<strong>${sender}: </strong>${message}`;
+        chatbox.appendChild(messageElement);
+        chatbox.scrollTop = chatbox.scrollHeight; // Auto-scroll to the latest message
+      }
+
+      // Function to add a participant to the participant list
+      function addParticipant(username) {
+        const participantElement = document.createElement("li");
+        participantElement.textContent = username;
+        participantList.appendChild(participantElement);
+      }
+
+      // Function to remove a participant from the participant list
+      function removeParticipant(username) {
+        const participants = participantList.getElementsByTagName("li");
+        for (let i = 0; i < participants.length; i++) {
+          if (participants[i].textContent === username) {
+            participants[i].remove();
+            break;
+          }
+        }
+      }
+
+      // Function to send a message
+      function sendMessage() {
+        const username = usernameInput.value;
+        const message = messageInput.value;
+        if (message.trim() === "") {
+          return; // Empty message, do nothing
+        }
+
+        // Simulate sending the message to the server (in this case, echoing it back)
+        addMessage(username, message);
+
+        // Clear the input field
+        messageInput.value = "";
+      }
+
+      // Event listener for the send button
+      sendButton.addEventListener("click", sendMessage);
+
+      // Event listener for the enter key in the input field
+      messageInput.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+          sendMessage();
+        }
+      });
+
+      // Event listener for the username input field
+      usernameInput.addEventListener("change", function (event) {
+        const username = event.target.value;
+        if (username.trim() === "") {
+          return; // Empty username, do nothing
+        }
+
+        addParticipant(username);
+      });
+
+      // Event listener for the username input field (to remove the participant on empty username)
+      usernameInput.addEventListener("keyup", function (event) {
+        if (event.key === "Enter") {
+          return; // Ignore Enter key press
+        }
+
+        const username = event.target.value;
+        if (username.trim() === "") {
+          removeParticipant(username);
+        }
+      });
+    </script>
+  </body>
+</html>

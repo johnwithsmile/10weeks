@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inlude, startsWith, endsWith</title>
+  </head>
+  <body>
+    <script>
+      let score = 90;
+      let money = 0;
+      if (score > 90) {
+        document.write("참 잘했어요. <br>");
+        money += 10000;
+      } else if (score > 80) {
+        document.write("잘했습니다. <br>");
+        money += 5000;
+      } else if (score > 70) {
+        document.write("고생하셨습니다. <br>");
+        money += 1000;
+      } else {
+        money = 0;
+      }
+      document.write(money);
+    </script>
+  </body>
+</html>
