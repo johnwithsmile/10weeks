@@ -1,0 +1,22 @@
+.navbar {
+  background-color: black;
+  color: white;
+  /* Add any additional styles you want */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  /* Add any additional styles you want */
+}
+
+.navbar li {
+  margin-right: 10px;
+  /* Add any additional styles you want */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  /* Add any additional styles you want */
+}
