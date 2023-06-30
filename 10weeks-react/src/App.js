@@ -1,15 +1,17 @@
 import "./App.css";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Counter from "./components/counrter.js";
-// import UseCount from "./components/useCount";
-import LoginForm from "./components/LoginForm";
+// import Counter from "./components/counter2";
+// import Timer from "./components/timer";
+// import ThemeSwitcher from "./components/themeReducer";
+import Chat from "./components/chat";
+
 function App() {
   return (
     <>
-      <h2> 안녕하세요</h2>
-      {/* <Counter></Counter> */}
-      {/* <UseCount></UseCount> */}
-      <LoginForm></LoginForm>
+      {/* <h2> Lifecycle 이해 </h2>
+      <Counter></Counter>
+      <Timer></Timer>
+      <ThemeSwitcher></ThemeSwitcher> */}
+      <Chat></Chat>
     </>
   );
 }
